@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File a Complaint - Complaints Portal</title>
+    <meta name="description" content="Submit a new complaint.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Complaint<span class="highlight">Portal</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">All Complaints</a></li>
+                <li><a href="add-complaint.html" class="btn-nav active">Register Complaint</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="form-wrapper">
+            <header class="page-header text-center">
+                <h1>File a Complaint</h1>
+                <p>Please fill out the form below to submit your issue.</p>
+            </header>
+
+            <form id="complaint-form" class="glass-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required placeholder="e.g. John Doe" autocomplete="name">
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required placeholder="e.g. New York">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="mobile">Mobile Number</label>
+                        <input type="tel" id="mobile" name="mobile" required placeholder="e.g. +1 234 567 8900" pattern="[+0-9\s\-]+">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="complaint">Complaint Details</label>
+                    <textarea id="complaint" name="complaint" rows="5" required placeholder="Please describe your issue in detail..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary w-100">
+                    <span>Submit Complaint</span>
+                    <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+
+                <div id="success-message" class="toast hidden">
+                    <svg class="toast-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    Complaint submitted successfully! Redirecting...
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 ComplaintPortal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
